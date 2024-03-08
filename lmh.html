@@ -1,115 +1,215 @@
-<html><head><title>Laura's Homepage</title>
+<html>
+    <head>
+        <title>Laura's Homepage</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="lmh.css" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="lmh.css" type="text/css" />
 
+        <base target="_blank" />
 
-<base target="_blank">
+        <script type="text/javascript">
+            function hideall() {
+                for (var i = 1; i <= 6; i++) document.getElementById("fred" + i).style.display = "none";
+            }
 
-<script type="text/javascript">
-function hideall(){
-for (var i = 1; i <= 6; i++)
-  document.getElementById('fred' + i).style.display='none';
-}
+            function togon(hover) {
+                hideall();
+                document.getElementById("fred" + hover).style.display = "inline";
+            }
+        </script>
+    </head>
 
-function togon(hover){
-hideall();
-document.getElementById('fred'+hover).style.display='inline';
-}
+    <body onclick="hideall();">
+        <table width="100%" height="100%" border="0">
+            <tr>
+                <td valign="middle" align="center">
+                    <table border="0">
+                        <tr>
+                            <td>
+                                <img src="1cs.jpg" onmouseover="togon('1');" class="thumbnail" /><br />
+                                <span>Communication</span>
+                                <br /><br />
+                                <img src="2cs.jpg" onmouseover="togon('3');" class="thumbnail" /><br />
+                                <span>Work</span>
+                                <br /><br />
+                                <img src="3cs.jpg" onmouseover="togon('5');" class="thumbnail" /><br />
+                                <span>Financial</span>
+                            </td>
+                            <td class="links">
+                                <div id="fred1" class="thestuff">
+                                    <!-- Communication Links -->
+                                    <ul>
+                                        <li>
+                                            <a href="http://www.gmail.com"><img src="gmail.png" /><br />G-mail</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.facebook.com"
+                                                ><img src="facebook.png" /><br />Facebook</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="http://maps.google.com"><img src="gmaps.png" /><br />Maps</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.weather.com"><img src="weather.png" /><br />Weather</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://news.google.com"><img src="gnews.png" /><br />News</a>
+                                        </li>
+                                    </ul>
+                                </div>
 
-</script>
+                                <div id="fred2" class="thestuff">
+                                    <!-- House -->
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.ecobee.com/home/ecobeeLogin.jsp"
+                                                ><img src="ecobee.png" /><br />Ecobee</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="https://my.rainmachine.com/devices"
+                                                ><img src="rainmachine.png" /><br />RainMachine</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="https://pinewoodbirchtree.nextdoor.com"
+                                                ><img src="nextdoor.png" /><br />NextDoor</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="https://trello.com/b/ywh7PxNL/main-harris-board"
+                                                ><img src="trello-logo.png" class="icon" /><br />Trello</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
 
-</head>
+                                <div id="fred3" class="thestuff">
+                                    <!-- Work -->
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.deltafaucet.biz/resources/index.html"
+                                                ><img src="delta.png" /><br />Delta</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="https://orders.corp-imaging.com/deltafaucet/?lid=en#"
+                                                ><img src="delta.png" /><br />Delta Promo Store</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="https://www.sloan.com/user/login"
+                                                ><img src="sloan.png" /><br />Sloan</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="https://sloanvalve.aimsmarter.com/"
+                                                ><img src="sloan.png" /><br />Sloan Promo Store</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="https://login.cmdgroup.com/Account/Login?returnUrl=https%3A%2F%2Finsight.cmdgroup.com%2F%3FReturnUrl%3D%252f&immediate=false"
+                                                ><img src="cmd.png" /><br />CMD</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="https://www.americanexpress.com/"
+                                                ><img src="amex.png" /><br />AmEx</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
 
-<body onclick="hideall();">
+                                <div id="fred4" class="thestuff">
+                                    <!-- Shopping -->
+                                    <ul>
+                                        <li>
+                                            <a href="http://www.amazon.com"><img src="amazon.png" /><br />Amazon</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.groupon.com/birmingham/all"
+                                                ><img src="groupon.png" /><br />Groupon</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="http://www.livingsocial.com/cities/64-birmingham"
+                                                ><img src="deals.png" /><br />LSoci`al</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="http://thesuperdeal.com/"
+                                                ><img src="super.png" /><br />SuperDeal</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="http://www.poshbirmingham.com/"
+                                                ><img src="posh.jpg" /><br />PoshBham</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
 
-<table width="100%" height="100%" border="0">
-<tr><td valign="middle" align="center">
+                                <div id="fred5" class="thestuff">
+                                    <!-- Financial -->
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.citi.com/credit-cards/citi.action"
+                                                ><img src="citi.png" /><br />CitiBank</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="http://www.avadiancu.com"
+                                                ><img src="avadian2.png" /><br />Avadian</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="http://www.fidelity.com"
+                                                ><img src="fidelity.png" /><br />Fidelity</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="https://myretirement.americanfunds.com"
+                                                ><img
+                                                    src="american-funds-sm.png"
+                                                    width="60"
+                                                    height="60"
+                                                /><br />American Funds</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
 
-<table border="0">
+                                <div id="fred6" class="thestuff">
+                                    <!-- Food -->
+                                    <ul>
+                                        <li>
+                                            <a href="http://www.publix.com"><img src="publix.png" /><br />Publix</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://squarenote.azurewebsites.net/honey"
+                                                ><img src="bee.png" /><br />Honey</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
 
-<tr>
-<td>
-
-<img src="1cs.jpg" onmouseover="togon('1');" class="thumbnail"><br>
-<span>Communication</span>
-<br><br>
-<img src="2cs.jpg" onmouseover="togon('3');" class="thumbnail"><br>
-<span>Work</span>
-<br><br>
-<img src="3cs.jpg" onmouseover="togon('5');" class="thumbnail"><br>
-<span>Financial</span>
-
-</td>
-<td class="links">
-
-<div id="fred1" class="thestuff"><!-- Communication Links -->
- <ul>
-  <li><a href="http://www.gmail.com"><img src="gmail.png"><br>G-mail</a>
-  <li><a href="http://www.facebook.com"><img src="facebook.png"><br>Facebook</a>
-  <li><a href="http://maps.google.com"><img src="gmaps.png"><br>Maps</a>
-  <li><a href="http://www.weather.com"><img src="weather.png"><br>Weather</a>
-  <li><a href="http://news.google.com"><img src="gnews.png"><br>News</a>
- </ul>
-</div>
-
-<div id="fred2" class="thestuff"> <!-- House -->
- <ul>
-  <li><a href="https://www.ecobee.com/home/ecobeeLogin.jsp"><img src="ecobee.png"><br>Ecobee</a>
-  <li><a href="https://my.rainmachine.com/devices"><img src="rainmachine.png"><br>RainMachine</a>
-  <li><a href="https://pinewoodbirchtree.nextdoor.com"><img src="nextdoor.png"><br>NextDoor</a>
-    <li><a href="https://trello.com/b/ywh7PxNL/main-harris-board"><img src="trello-logo.png" class="icon"><br>Trello</a></li>
- </ul>
-</div>
-
-<div id="fred3" class="thestuff"> <!-- Work -->
-<ul>
-  <li><a href="https://www.deltafaucet.biz/resources/index.html"><img src="delta.png"><br>Delta</a>
-  <li><a href="https://orders.corp-imaging.com/deltafaucet/?lid=en#"><img src="delta.png"><br>Delta Promo Store</a></li>
-  <li><a href="https://www.sloan.com/user/login"><img src="sloan.png"><br>Sloan</a>
-  <li><a href="https://sloanvalve.logoshop.com/?fromAppCode=CHCK&fromAppVer=3.0.0&guidtype=App&extguid=2774d417-da65-4f45-8a9f-64cb44b095a4&referrerPage=Checkout&refPgId=132828&PCUrl=1"><img src="sloan.png"><br>Sloan Promo Store</a></li>
-  <li><a href="https://login.cmdgroup.com/Account/Login?returnUrl=https%3A%2F%2Finsight.cmdgroup.com%2F%3FReturnUrl%3D%252f&immediate=false"><img src="cmd.png"><br>CMD</a></li>
-  <li><a href="https://www.americanexpress.com/"><img src="amex.png"><br>AmEx</a>
-</ul></div>
-
-<div id="fred4" class="thestuff"> <!-- Shopping -->
-<ul>
- <li><a href="http://www.amazon.com"><img src="amazon.png"><br>Amazon</a>
- <li><a href="http://www.groupon.com/birmingham/all"><img src="groupon.png"><br>Groupon</a>
- <li><a href="http://www.livingsocial.com/cities/64-birmingham"><img src="deals.png"><br>LSoci`al</a>
- <li><a href="http://thesuperdeal.com/"><img src="super.png"><br>SuperDeal</a>
- <li><a href="http://www.poshbirmingham.com/"><img src="posh.jpg"><br>PoshBham</a>
-</ul></div>
-
-<div id="fred5" class="thestuff"><!-- Financial -->
-<ul> 
- <li><a href="https://www.citi.com/credit-cards/citi.action"><img src="citi.png"><br>CitiBank</a>
- <li><a href="http://www.avadiancu.com"><img src="avadian2.png"><br>Avadian</a>
- <li><a href="http://www.fidelity.com"><img src="fidelity.png"><br>Fidelity</a>
- <li><a href="https://myretirement.americanfunds.com"><img src="american-funds-sm.png" width="60" height="60"><br>American Funds</a>
-</ul></div>
-
-<div id="fred6" class="thestuff"> <!-- Food -->
-<ul>
- <li><a href="http://www.publix.com"><img src="publix.png"><br>Publix</a>
- <li><a href="https://squarenote.azurewebsites.net/honey"><img src="bee.png"><br>Honey</a>
-</ul></div>
-
-</td>
-
-<td>
-
-<img src="5cs.jpg" onmouseover="togon('2');" class="thumbnail"><br>
-<span>House</span>
-<br><br>
-<img src="4cs.jpg" onmouseover="togon('4');" class="thumbnail"><br>
-<span>Shopping</span>
-<br><br>
-<img src="6cs.jpg" onmouseover="togon('6');" class="thumbnail"><br>
-<span>Food</span>
-
-</td></tr>
-</table>
-
-</td></tr></table>
-</body></html>
+                            <td>
+                                <img src="5cs.jpg" onmouseover="togon('2');" class="thumbnail" /><br />
+                                <span>House</span>
+                                <br /><br />
+                                <img src="4cs.jpg" onmouseover="togon('4');" class="thumbnail" /><br />
+                                <span>Shopping</span>
+                                <br /><br />
+                                <img src="6cs.jpg" onmouseover="togon('6');" class="thumbnail" /><br />
+                                <span>Food</span>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
