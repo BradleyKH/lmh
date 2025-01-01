@@ -227,17 +227,18 @@ a {
     a {
         margin: 0 0 10px 10px;
         border-radius: 10px;
-        background-color: #eee;
     }
 
     .a-green {
         color: #759650;
         border: 1px solid #759650;
+        background-color: #eee;
     }
 
     .a-blue {
         color: #5187a6;
         border: 1px solid #5187a6;
+        background-color: #eee;
     }
 
     .toggle-container {
