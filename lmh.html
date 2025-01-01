@@ -10,16 +10,21 @@
         <base target="_blank" />
 
         <script>
+            const prevTheme = localStorage.getItem("theme") || "green";
+            let theme = prevTheme === "green" ? "blue" : "green";
+
             function setActive(squareId, linksId) {
                 const squares = document.querySelectorAll(".square");
                 const links = document.querySelectorAll(".links");
                 squares.forEach((square) => {
-                    square.classList.remove("active");
+                    square.classList.remove("active-green");
+                    square.classList.remove("active-blue");
                 });
                 links.forEach((link) => {
                     link.classList.remove("visible");
                 });
-                document.getElementById(squareId).classList.add("active");
+                const squareClass = theme === "green" ? "active-green" : "active-blue";
+                document.getElementById(squareId).classList.add(squareClass);
                 document.getElementById(linksId).classList.add("visible");
             }
 
@@ -27,11 +32,74 @@
                 const squares = document.querySelectorAll(".square");
                 const links = document.querySelectorAll(".links");
                 squares.forEach((square) => {
-                    square.classList.remove("active");
+                    square.classList.remove("active-green");
+                    square.classList.remove("active-blue");
                 });
                 links.forEach((link) => {
                     link.classList.remove("visible");
                 });
+            }
+
+            function showToggleButton() {
+                const toggleButton = document.querySelector(".toggle-button");
+                toggleButton.classList.add("toggle-button-visible");
+            }
+
+            function hideToggleButton() {
+                const toggleButton = document.querySelector(".toggle-button");
+                toggleButton.classList.remove("toggle-button-visible");
+            }
+
+            function toggleTheme() {
+                theme = theme === "green" ? "blue" : "green";
+                localStorage.setItem("theme", theme);
+
+                if (theme === "green") {
+                    const toggleText = document.querySelector(".toggle-button-text");
+                    toggleText.textContent = "Green";
+
+                    const hero = document.querySelector(".hero");
+                    hero.classList.remove("hero-blue");
+                    hero.classList.add("hero-green");
+
+                    const squares = document.querySelectorAll(".square");
+                    squares.forEach((square) => {
+                        square.classList.remove("square-blue");
+                        square.classList.add("square-green");
+                    });
+
+                    const links = document.querySelectorAll("a");
+                    links.forEach((link) => {
+                        link.classList.remove("a-blue");
+                        link.classList.add("a-green");
+                    });
+
+                    document.body.classList.remove("body-blue");
+                    document.body.classList.add("body-green");
+                } else {
+                    const toggleText = document.querySelector(".toggle-button-text");
+                    toggleText.textContent = "Blue";
+
+                    const hero = document.querySelector(".hero");
+                    hero.classList.remove("hero-green");
+                    hero.classList.add("hero-blue");
+
+                    const squares = document.querySelectorAll(".square");
+                    squares.forEach((square) => {
+                        square.classList.remove("square-green");
+                        square.classList.add("square-blue");
+                    });
+
+                    const links = document.querySelectorAll("a");
+                    links.forEach((link) => {
+                        link.classList.remove("a-green");
+                        link.classList.add("a-blue");
+                    });
+
+                    document.body.classList.remove("body-green");
+                    document.body.classList.add("body-blue");
+                }
+                setInactive();
             }
 
             document.addEventListener("click", setInactive);
@@ -39,6 +107,12 @@
     </head>
     <body>
         <div class="hero" onclick="setInactive()"></div>
+
+        <div class="toggle-container" onmouseover="showToggleButton()" onmouseout="hideToggleButton()">
+            <div class="toggle-button" onclick="toggleTheme()">
+                <div class="toggle-button-text">Green</div>
+            </div>
+        </div>
 
         <div class="row">
             <div class="column">
@@ -100,4 +174,8 @@
             </div>
         </div>
     </body>
+
+    <script>
+        toggleTheme();
+    </script>
 </html>
